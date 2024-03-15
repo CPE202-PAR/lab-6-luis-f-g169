@@ -110,5 +110,12 @@ class TestHeap(unittest.TestCase):
         test_heap.heap_sort_ascending(list1)
         self.assertEqual(list1, [2, 5, 6, 7, 8, 9])
 
+    def test_21_heap_sort_increase1(self) -> None:
+        test_heap = MinHeap()
+        self.assertEqual(test_heap.contents(), [])
+        test_list = [i for i in range(60)]
+        test_heap.build_heap(test_list)
+        self.assertEqual(test_heap.size(), 60)
+
 if __name__ == "__main__":
     unittest.main()

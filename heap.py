@@ -5,7 +5,7 @@ from typing import Any, List
 class MinHeap:
     heap_capacity: int = 50          # default capacity of heap is 50
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         self.heap = [0]*(self.heap_capacity+1)      # index 0 not used for heap
         self.num_items = 0                          # empty heap
 
@@ -43,7 +43,7 @@ class MinHeap:
         """returns a list of contents of the heap in the order it is stored internal to the heap.
         (This may be useful for in testing your implementation.)
         If heap is empty, returns empty list []"""
-        list = []
+        list: List = []
         if self.is_empty():
             return list
         else:
